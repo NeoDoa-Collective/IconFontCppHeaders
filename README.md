@@ -1,42 +1,27 @@
-Support development of IconFontCppHeaders through [GitHub Sponsors](https://github.com/sponsors/dougbinks) or [Patreon](https://www.patreon.com/enkisoftware)
-
-[<img src="https://img.shields.io/static/v1?logo=github&label=Github&message=Sponsor&color=#ea4aaa" width="200"/>](https://github.com/sponsors/dougbinks)    [<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="Become a Patron" width="150"/>](https://www.patreon.com/enkisoftware)
-
-
-# IconFontCppHeaders
+# IconFontCppHeaders for NeoDoa Game Engine
 
 [https://github.com/juliettef/IconFontCppHeaders](https://github.com/juliettef/IconFontCppHeaders)
 
-C and C++ headers, C# and Python classes, Rust files and Go package for icon fonts Font Awesome, Fork Awesome, Google Material Design icons, Kenney game icons, Fontaudio and Codicons.
+[https://github.com/NeoDoa-Collective/IconFontCppHeaders](https://github.com/NeoDoa-Collective/IconFontCppHeaders)
 
-A set of header files and classes for using icon fonts in C, C++, C#, Python, Rust and Go, along with the python generator used to create the files.
+C, C++ headers for icon fonts Font Awesome.
+
+A set of header files and classes for using icon fonts in C, C++, along with the python generator used to create the files.
 
 Each header contains defines for one font, with each icon code point defined as ICON_*, along with the min, max and max 16 bit code points for font loading purposes. The min excludes the ASCII characters code points. The max 16 bit is for use with libraries that only support 16 bit code points, for example Dear ImGui.
 
 In addition the python script can be used to convert ttf font files to C and C++ headers. 
 Each ttf icon font file is converted to a C and C++ header file containing a single array of bytes. 
-To enable conversion, run the GenerateIconFontCppHeaders.py script with 'ttf2headerC = True'. 
+To enable conversion, run the GenerateIconFontCppHeadersOnly.py script with 'ttf2headerC = True'. 
 
 ## Icon Fonts
 
-### Font Awesome
-* [fontawesome.com](https://fontawesome.com)
-* [github.com/FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+*Due to the nature of NeoDoa's requirements, support for most of the font sets are dropped.*
 
-#### Font Awesome 4
-* [github.com/FortAwesome/Font-Awesome/tree/4.x](https://github.com/FortAwesome/Font-Awesome/tree/4.x)
-* [icons.yml](https://github.com/FortAwesome/Font-Awesome/blob/4.x/src/icons.yml)
-* [fontawesome-webfont.ttf](https://github.com/FortAwesome/Font-Awesome/blob/4.x/fonts/fontawesome-webfont.ttf)
-
-#### Font Awesome 5 free
-* [github.com/FortAwesome/Font-Awesome/tree/5.x](https://github.com/FortAwesome/Font-Awesome/tree/5.x)
-* [icons.yml](https://github.com/FortAwesome/Font-Awesome/blob/5.x/metadata/icons.yml)
-* [fa-brands-400.ttf](https://github.com/FortAwesome/Font-Awesome/blob/5.x/webfonts/fa-brands-400.ttf)
-* [fa-regular-400.ttf](https://github.com/FortAwesome/Font-Awesome/blob/5.x/webfonts/fa-regular-400.ttf)
-* [fa-solid-900.ttf](https://github.com/FortAwesome/Font-Awesome/blob/5.x/webfonts/fa-solid-900.ttf)
-
-#### Font Awesome 5 pro
-* Paid product, see [notes about generating the header files](#notes-about-font-awesome-5-and-6)
+~~Font Awesome~~  
+~~Font Awesome 4~~  
+~~Font Awesome 5 free~~  
+~~Font Awesome 5 pro~~
 
 #### Font Awesome 6 free
 * [github.com/FortAwesome/Font-Awesome/tree/6.x](https://github.com/FortAwesome/Font-Awesome/tree/6.x)
@@ -48,36 +33,12 @@ To enable conversion, run the GenerateIconFontCppHeaders.py script with 'ttf2hea
 #### Font Awesome 6 pro
 * Commercial product, not supported but [generation should be similar to FA5 Pro](#notes-about-font-awesome-5-and-6), or see [@jakerieger's fork](https://github.com/jakerieger/IconFontCppHeaders)
 
-### Fork Awesome
-* [forkawesome.github.io/Fork-Awesome](https://forkawesome.github.io/Fork-Awesome)
-* [github.com/ForkAwesome/Fork-Awesome](https://github.com/ForkAwesome/Fork-Awesome)
-* [icons.yml](https://github.com/ForkAwesome/Fork-Awesome/blob/master/src/icons/icons.yml)
-* [forkawesome-webfont.ttf](https://github.com/ForkAwesome/Fork-Awesome/blob/master/fonts/forkawesome-webfont.ttf)
-
-### Google Material Design icons
-* [design.google.com/icon](https://design.google.com/icons)
-* [github.com/google/material-design-icons](https://github.com/google/material-design-icons)
-* [codepoints](https://github.com/google/material-design-icons/blob/master/font/MaterialIcons-Regular.codepoints)
-* [MaterialIcons-Regular.ttf](https://github.com/google/material-design-icons/blob/master/font/MaterialIcons-Regular.ttf)
-
-### Kenney Game icons and expansion 
-* [kenney.nl/assets/game-icons](http://kenney.nl/assets/game-icons) and [kenney.nl/assets/game-icons-expansion](http://kenney.nl/assets/game-icons-expansion) 
-* [github.com/nicodinh/kenney-icon-font](https://github.com/nicodinh/kenney-icon-font)
-* [kenney-icons.css](https://github.com/nicodinh/kenney-icon-font/blob/master/css/kenney-icons.css)
-* [kenney-icon-font.ttf](https://github.com/nicodinh/kenney-icon-font/blob/master/fonts/kenney-icon-font.ttf)
-
-### Fontaudio
-* [github.com/fefanto/fontaudio](https://github.com/fefanto/fontaudio)
-* [fontaudio.css](https://github.com/fefanto/fontaudio/blob/master/font/fontaudio.css)
-* [fontaudio.ttf](https://github.com/fefanto/fontaudio/blob/master/font/fontaudio.ttf)
-
-### Codicons
-* [github.com/microsoft/vscode-codicons](https://github.com/microsoft/vscode-codicons)
-* [codicon.css](https://github.com/microsoft/vscode-codicons/blob/main/dist/codicon.css)
-* [codicon.ttf](https://github.com/microsoft/vscode-codicons/blob/main/dist/codicon.ttf)
-
-### Ionicons and webfont Material Design Icons
-* Unsupported as of 29 Apr 2020. See [Issue #16](https://github.com/juliettef/IconFontCppHeaders/issues/16).
+~~Fork Awesome~~  
+~~Google Material Design icons~~  
+~~Kenney Game icons and expansion~~  
+~~Fontaudio~~  
+~~Codicons~~  
+~~Ionicons and webfont Material Design Icons~~
 
 ### Notes about Font Awesome 5 and 6
 #### Codepoints grouping
@@ -121,54 +82,6 @@ ImGui::Text( ICON_FA_PAINT_BRUSH "  Paint" ); // use string literal concatenatio
 // outputs a paint brush icon and 'Paint' as a string.
 ```
 
-## Projects using the font icon header files
-
-### Avoyd
-Voxel editor and 6 degree of freedom FPS game with editable environments. The voxel editor's UI uses Dear ImGui with Font Awesome icon fonts.  
-[www.avoyd.com](https://www.avoyd.com)
-
-![Screenshot of the the game Avoyd's Voxel Editor UI using an IconFontCppHeaders header file for Font Awesome with Dear ImGui](https://github.com/juliettef/Media/blob/main/IconFontCppHeaders_Avoyd_voxel_editor.png?raw=true)
-
-### bgfx
-Cross-platform rendering library  
-[bkaradzic.github.io/bgfx/overview](https://bkaradzic.github.io/bgfx/overview.html)  
-[github.com/bkaradzic/bgfx](https://github.com/bkaradzic/bgfx)
-
-### glChAoS.P
-Real time 3D strange attractors scout  
-[www.michelemorrone.eu/glchaosp](https://www.michelemorrone.eu/glchaosp)  
-[github.com/BrutPitt/glChAoS.P](https://github.com/BrutPitt/glChAoS.P)
-
-![Screenshot of glChAoS.P UI using IconFontCppHeaders header file for Font Awesome with Dear ImGui](https://raw.githubusercontent.com/BrutPitt/glChAoS.P/master/imgsCapture/ssWGL_half.jpg)
-
-### iPlug2
-Cross platform C++ audio plug-in framework  
-[iplug2.github.io](https://iplug2.github.io)  
-[github.com/iplug2/iplug2](https://github.com/iplug2/iplug2)
-
-### Lumix Engine
-3D C++ open source game engine  
-[github.com/nem0/LumixEngine](https://github.com/nem0/LumixEngine)  
-
-![Screenshot of Lumix Engine editor using IconFontCppHeaders header file for Font Awesome with Dear ImGui](https://raw.githubusercontent.com/wiki/nem0/LumixEngine/files/features/editor.jpg)
-
-### Tracy Profiler
-Real time, nanosecond resolution, remote telemetry frame profiler for games and other applications.  
-[bitbucket.org/wolfpld/tracy](https://bitbucket.org/wolfpld/tracy)  
-
-[![New features in Tracy Profiler v0.6](https://img.youtube.com/vi/uJkrFgriuOo/0.jpg)](https://www.youtube.com/watch?v=uJkrFgriuOo)
-
-### Visual 6502 Remix
-Transistor level 6502 Hardware Simulation  
-[floooh.github.io/visual6502remix](https://floooh.github.io/visual6502remix)  
-[github.com/floooh/v6502r](https://github.com/floooh/v6502r)  
-
-## Related Tools
-
-### ImGuiFontStudio
-Create font subsets  
-[github.com/aiekick/ImGuiFontStudio](https://github.com/aiekick/ImGuiFontStudio)  
-
 ## Credits
 
 Development - [Juliette Foucaut](http://www.enkisoftware.com/about.html#juliette) - [@juliettef](https://github.com/juliettef)  
@@ -186,3 +99,4 @@ Python language implementation - Hang Yu - [@yhyu13](https://github.com/yhyu13)
 Go language implementation - Matt Pharr - [@mpp](https://github.com/mmp)  
 Codicons implementation - Robert Ryan - [@rtryan98](https://github.com/rtryan98)  
 Rust language implementation - Gaeel Bradshaw-Rodriguez - [@Bradshaw](https://github.com/Bradshaw)  
+Additional development for NeoDoa - [Doğa Oruç](aeris170.github.io) - [@aeris170](https://github.com/aeris170)
